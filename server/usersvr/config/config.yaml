@@ -1,0 +1,56 @@
+svr_config:
+  name: "usersvr"
+  host: "127.0.0.1"
+  port: 8000
+
+
+redis:
+  host: "127.0.0.1"
+  password: "123456"
+  db: 0
+  port: 6379
+  PoolSize: 10
+
+
+redsync:
+  - host: "43.139.192.217"
+    password: "123456"
+    port: 6380
+    LockExpire: 4
+    PoolSize: 10
+
+  - host: "43.139.192.217"
+    password: "123456"
+    port: 6381
+    LockExpire: 4
+    PoolSize: 10
+
+  - host: "43.139.192.217"
+    password: "123456"
+    port: 6379
+    LockExpire: 4
+    PoolSize: 10
+
+mysql:
+  host: "43.139.192.217"
+  port: "8086"
+  database: "camps_tiktok"
+  username: "root"
+  password: "123456"
+  max_idle_conn: 10
+  max_open_conn: 100
+  max_idle_time: 30
+
+log:
+  level: "debug"
+  file_name: "usersvr.log"
+  log_path: "../../log/usersvr/"
+  max_size: 200
+  max_age: 30
+  max_backups: 7
+
+consul:
+  host: "43.139.192.217"
+  port: 8500
+  tags:
+    - "usersvr"
